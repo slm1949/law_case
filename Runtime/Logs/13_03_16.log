@@ -1,0 +1,17 @@
+[ 2013-03-16T11:12:33+08:00 ] 127.0.0.1 /law_case/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001344s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.001425s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009101s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.010553s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.011162s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.011788s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.012265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002424s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.013055s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000938s ]
+
