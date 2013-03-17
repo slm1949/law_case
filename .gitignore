@@ -1,5 +1,5 @@
-/Runtime/Cache
-/Runtime/Data
-/Runtime/Logs
-/Runtime/Temp
+/protected/App/Runtime/Cache
+/protected/App/Runtime/Data
+/protected/App/Runtime/Logs
+/protected/App/Runtime/Temp
 *~
