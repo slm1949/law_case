@@ -46,8 +46,8 @@ CREATE TABLE IF NOT EXISTS `think_article` (
 
 CREATE TABLE IF NOT EXISTS `think_case` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `case_name` varchar(50) NOT NULL,
-  `describe` varchar(255) NOT NULL,
+  `name` varchar(32) NOT NULL,
+  `description` varchar(255) NOT NULL,
   `picture` blob NOT NULL,
   `create_time` datetime NOT NULL,
   `modify_time` datetime NOT NULL,

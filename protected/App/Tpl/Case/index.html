@@ -1,0 +1,23 @@
+<a href="__APP__/Case/add">添加</a>
+
+<table>
+    <tr>
+        <td>ID</td>
+        <td>名称</td>
+        <td>创建时间</td>
+        <td>更新时间</td>
+        <td>操作</td>
+    </tr>
+    <foreach name="cases" item="case">
+    <tr>
+        <td>{$case.id}</td>
+        <td>{$case.name}</td>
+        <td>{$case.create_time}</td>
+        <td>{$case.modify_time}</td>
+        <td>
+            <a href="__APP__/Case/edit/{$case.id}">修改</a>
+            <a href="__APP__/Case/delete/{$case.id}">删除</a>
+        </td>
+    </tr>
+    </foreach>
+</table>
