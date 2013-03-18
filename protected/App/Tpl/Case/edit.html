@@ -1,6 +1,6 @@
-<FORM method="post" action="__URL__/update">
-标题：<INPUT type="text" name="name" value="{$case.name}"><br/>
-内容：<TEXTAREA name="description" rows="5" cols="45">{$case.description}</TEXTAREA><br/>
-<INPUT type="hidden" name="id" value="{$vo.id}">
-<INPUT type="submit" value="提交">
-</FORM>
+<form method="post" action="__URL__/update">
+<input type="hidden" name="id" value="{$case.id}">
+标题：<input type="text" name="name" value="{$case.name}"><br/>
+内容：<textarea name="description" rows="5" cols="45">{$case.description}</textarea><br/>
+<input type="submit" value="提交">
+</form>
