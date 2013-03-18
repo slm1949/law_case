@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013 年 03 月 16 日 23:04
+-- 生成日期: 2013 年 03 月 17 日 21:09
 -- 服务器版本: 5.5.29
 -- PHP 版本: 5.4.6-1ubuntu1.1
 
@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS `think_article` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `case_id` int(11) NOT NULL,
   `article_name` varchar(50) NOT NULL,
+  `sort` int(11) NOT NULL,
   `summary` varchar(500) NOT NULL,
   `content` text NOT NULL,
   `create_time` datetime NOT NULL,
