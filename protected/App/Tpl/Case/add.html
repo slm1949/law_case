@@ -1,5 +1,18 @@
-<FORM method="post" action="__URL__/create">
-标题：<INPUT type="text" name="name"><br/>
-内容：<TEXTAREA name="description" rows="5" cols="45"></TEXTAREA><br/>
-<INPUT type="submit" value="提交">
-</FORM>
+<form class="form-horizontal" method="post" action="__URL__/create">
+    <fieldset>
+    <legend>添加</legend>
+        <div class="control-group">
+            <label class="control-label">标题</label>
+            <div class="controls">
+                <input type="text" name="name">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">描述</label>
+            <div class="controls">
+                <textarea name="description" rows="5" cols="45"></textarea>
+            </div>
+        </div>
+        <input class="btn" type="submit" value="提交">
+    </fieldset>
+</form>
