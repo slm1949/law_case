@@ -60,8 +60,9 @@ class CaseAction extends Action {
 
     public function delete($id=0){
         $Case = M('Case');
-        $Case->delete($id);
+        $Case->where(array('id'=>$id))->delete();
 
+        $this->success('删除成功');
         $this->redirect('Case/index');
     }
 }
