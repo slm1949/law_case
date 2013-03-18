@@ -2,7 +2,7 @@
 class CaseModel extends Model{
    // 定义自动验证
     protected $_validate    =   array(
-        array('title','require','标题必须'),
+        array('name','require','名称必须填写'),
     );
 
     // 定义自动完成
