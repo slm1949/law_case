@@ -7,7 +7,10 @@ class CaseModel extends Model{
 
     // 定义自动完成
     protected $_auto    =   array(
-        array('create_time', 'time' , 1, 'function'),
-        array('modify_time', 'time' , 2, 'function'),
+        array('create_time', 'get_client_time' , 1, 'callback'),
+        array('modify_time', 'get_client_time' , 2, 'callback'),
     );
+    public function get_client_time(){
+        return date("Y-m-d H:i:s");
+    }
 }
