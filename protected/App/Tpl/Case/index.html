@@ -19,7 +19,35 @@
         <td>
             <a href="__APP__/Case/edit/id/{$case.id}" class="btn btn-primary">修改</a>
             <a href="__APP__/Case/delete/id/{$case.id}" class="btn btn-primary">删除</a>
+            <a href="__APP__/Article/add/id/{$case.id}" class="btn btn-primary">添加文章</a>
         </td>
+<tr>
+        <td>  </td>
+        <td>ID</td>
+        <td>名称</td>
+        <td>简介</td>
+        <td>内容</td>
+        <td>创建时间</td>
+        <td>更新时间</td>
+        <td>操作</td>
+    </tr>
+        <volist name="articles" id="article">
+    <if condition="$article.case_id EQ $case['id']">
+      <tr>
+        <td>  </td>
+        <td>{$article.id}</td>
+        <td>{$article.article_name}</td>
+        <td>{$article.summary}</td>
+        <td>{$article.content}</td>
+        <td>{$article.create_time}</td>
+        <td>{$article.modify_time}</td>
+        <td>
+            <a href="__APP__/Article/edit/id/{$article.id}" class="btn btn-primary">修改</a>
+            <a href="__APP__/Article/delete/id/{$article.id}" class="btn btn-primary">删除</a>
+       </td>
+            
+          </if>
+       </volist>
     </tr>
     </foreach>
 </table>

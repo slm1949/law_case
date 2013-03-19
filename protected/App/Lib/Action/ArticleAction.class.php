@@ -1,12 +1,9 @@
 <?php
-// 本类由系统自动生成，仅供测试用途
-class CaseAction extends Action {
+class ArticleAction extends Action {
 
     public function index(){
         $Case = M("Case");
-        $this->cases = $Case->select();
-        $Article=M('Article');
-        $this->articles=$Article->select();
+        $this->cases = $Case->select(); 
         $this->display();
     }
 
@@ -23,13 +20,14 @@ class CaseAction extends Action {
     }
 
     public function add(){
+        $this->case_id=$_GET['id'];
         $this->display();
     }
 
     public function create(){
-        $Case   =   D('Case');
-        if($Case->create()) {
-            $result =   $Case->add();
+        $Article   =   D('Article');
+        if($Article->create()) {
+            $result =   $Article->add();
             if($result) {
                 $this->success('操作成功！', '__APP__/Case/index');
             }else{
@@ -41,15 +39,15 @@ class CaseAction extends Action {
     }
 
     public function edit($id=0){
-        $Case   =   M('Case');
-        $this->case   =   $Case->find($id);
+        $Article   =   M('Article');
+        $this->article   =   $Article->find($id);
         $this->display();
     }
 
     public function update(){
-        $Case   =   D('Case');
-        if($Case->create()) {
-            $result =   $Case->save();
+        $Article   =   D('Article');
+        if($Article->create()) {
+            $result =   $Article->save();
             if($result) {
                 $this->success('操作成功！', '__APP__/Case/index');
             }else{
@@ -61,8 +59,8 @@ class CaseAction extends Action {
     }
 
     public function delete($id=0){
-        $Case = M('Case');
-        $Case->where(array('id'=>$id))->delete();
+        $Article = M('Article');
+        $Article->where("id=$id")->delete();
 
         $this->success('删除成功', '__APP__/Case/index');
     }

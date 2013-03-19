@@ -1,0 +1,19 @@
+<form class="form-horizontal" method="post" action="__URL__/create">
+    <fieldset>
+    <legend>添加文章</legend>
+        <div class="control-group">
+            <label class="control-label">标题</label>
+            <div class="controls">
+                <input type="text" name="article_name">
+                <input type="hidden" name="case_id" value={$case_id}>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">简介</label>
+            <div class="controls">
+                <textarea name="summary" rows="5" cols="45"></textarea>
+            </div>
+        </div>
+        <input class="btn" type="submit" value="提交">
+    </fieldset>
+</form>
