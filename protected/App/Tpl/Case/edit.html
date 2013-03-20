@@ -1,6 +1,15 @@
-<form method="post" action="__URL__/update">
-<input type="hidden" name="id" value="{$case.id}">
-标题：<input type="text" name="name" value="{$case.name}"><br/>
-内容：<textarea name="description" rows="5" cols="45">{$case.description}</textarea><br/>
-<input type="submit" value="提交">
+<form class="form-horizontal"  method="post" action="__URL__/update">
+   <fieldset>
+     <div class="control-group">
+        <input type="hidden" name="id" value="{$case.id}">
+        <label class="control_label">标题：</label>
+        <div class="controls">
+          <input type="text" name="name" value="{$case.name}"><br/>
+        </div>
+        <label class="control_label">内容：</label>
+         <div class="controls">
+            <textarea name="description" rows="5" cols="45">{$case.description}</textarea><br/>
+         </div>
+     </div>
+<input class="btn" type="submit" value="提交">
 </form>
