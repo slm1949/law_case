@@ -29,7 +29,7 @@ class ArticleAction extends Action {
         if($Article->create()) {
             $result =   $Article->add();
             if($result) {
-                $this->success('操作成功！', '__APP__/Case/index');
+                $this->success('操作成功！', '__APP__/Case/read/id/'.$_POST['case_id']);
             }else{
                 $this->error('写入错误！');
             }
