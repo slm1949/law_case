@@ -8,9 +8,9 @@ class ArticleAction extends Action {
     }
 
     public function read($id=0){
-        $Case   =   M('Case');
+        $Article   =   M('Article');
         // 读取数据
-        $data =   $Case->find($id);
+        $data =   $Article->find($id);
         if($data) {
             $this->data =   $data;// 模板变量赋值
         }else{

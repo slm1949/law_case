@@ -5,8 +5,6 @@ class CaseAction extends Action {
     public function index(){
         $Case = M("Case");
         $this->cases = $Case->select();
-        $Article=M('Article');
-        $this->articles=$Article->select();
         $this->display();
     }
 
@@ -19,6 +17,9 @@ class CaseAction extends Action {
         }else{
             $this->error('数据错误');
         }
+        $Article=   M('Article');
+        $data2 =   $Article->where("case_id='$id'")->select();
+        $this->data2=   $data2;// 模板变量赋值
         $this->display();
     }
 
