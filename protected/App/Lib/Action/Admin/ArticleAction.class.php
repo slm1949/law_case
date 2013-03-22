@@ -29,7 +29,7 @@ class ArticleAction extends Action {
         if($Article->create()) {
             $result =   $Article->add();
             if($result) {
-                $this->success('操作成功！', '__APP__/Case/read/id/'.$_POST['case_id']);
+                $this->success('操作成功！', '__APP__/Admin/Case/read/id/'.$_POST['case_id']);
             }else{
                 $this->error('写入错误！');
             }
@@ -49,7 +49,7 @@ class ArticleAction extends Action {
         if($Article->create()) {
             $result =   $Article->save();
             if($result) {
-                $this->success('操作成功！', '__APP__/Case/index');
+                $this->success('操作成功！', '__APP__/Admin/Case/index');
             }else{
                 $this->error('写入错误！');
             }
@@ -62,6 +62,6 @@ class ArticleAction extends Action {
         $Article = M('Article');
         $Article->where("id=$id")->delete();
 
-        $this->success('删除成功', '__APP__/Case/index');
+        $this->success('删除成功', '__APP__/Admin/Case/index');
     }
 }
