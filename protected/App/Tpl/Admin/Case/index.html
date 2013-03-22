@@ -1,0 +1,28 @@
+<a href="__APP__/Admin/User/login_front" class="btn btn-link">管理员登陆</a>
+<a href="__APP__/Admin/User/logout_front" class="btn btn-link">管理员注销</a>
+<p>
+<a href="__APP__/Admin/Case/add" class="btn btn-primary">添加</a>
+<table class="table">
+    <tr>
+        <td>ID</td>
+        <td>名称</td>
+        <td>描述</td>
+        <td>图片</td>
+        <td>创建时间</td>
+        <td>更新时间</td>
+        <td>操作</td>
+    </tr>
+    <foreach name="cases" item="case">
+    <tr>
+        <td><a href="__APP__/Admin/Case/read/id/{$case.id}">{$case.id}</a></td>
+        <td>{$case.name}</td>
+        <td>{$case.description}</td>
+        <td>{$case.picture}</td>
+        <td>{$case.create_time}</td>
+        <td>{$case.modify_time}</td>
+        <td>
+            <a href="__APP__/Admin/Case/edit/id/{$case.id}" class="btn btn-primary">修改</a>
+            <a href="__APP__/Admin/Case/delete/id/{$case.id}" class="btn btn-primary">删除</a>
+        </td>
+    </foreach>
+</table>

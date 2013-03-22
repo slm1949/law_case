@@ -6,7 +6,7 @@
       $condition['password']=$_POST['password'];
       if($Form->where($condition)->count()>=1){
        $_SESSION['user_name']=$_POST['user_name'];
-       $this->success('登陆成功', '__APP__/Case/index');
+       $this->success('登陆成功', '__APP__/Admin/Case/index');
       }
     }
   }    

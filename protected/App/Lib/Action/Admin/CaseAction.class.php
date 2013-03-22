@@ -32,7 +32,7 @@ class CaseAction extends Action {
         if($Case->create()) {
             $result =   $Case->add();
             if($result) {
-                $this->success('操作成功！', '__APP__/Case/index');
+                $this->success('操作成功！', '__URL__/index');
             }else{
                 $this->error('写入错误！');
             }
@@ -52,7 +52,7 @@ class CaseAction extends Action {
         if($Case->create()) {
             $result =   $Case->save();
             if($result) {
-                $this->success('操作成功！', '__APP__/Case/index');
+                $this->success('操作成功！', '__URL__/index');
             }else{
                 $this->error('写入错误！');
             }
@@ -65,6 +65,6 @@ class CaseAction extends Action {
         $Case = M('Case');
         $Case->where(array('id'=>$id))->delete();
 
-        $this->success('删除成功', '__APP__/Case/index');
+        $this->success('删除成功', '__URL__/index');
     }
 }
