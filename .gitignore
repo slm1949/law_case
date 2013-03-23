@@ -2,4 +2,5 @@
 /protected/App/Runtime/Data
 /protected/App/Runtime/Logs
 /protected/App/Runtime/Temp
+/protected/App/Conf/config.php
 *~
