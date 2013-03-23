@@ -5,7 +5,7 @@
 	</div>
 	<div class="hero-unit">
 		<div class="container">
-			<h2>Two Columns Left Sidebar</h2>
+			<h2>{$case_info.name}</h2>
 		</div>
 		<!--close container--> 
 	</div>
@@ -17,7 +17,7 @@
 			<!--begin row-fluid-->
 			<div class="span9 primary-column"> 
 				<!--begin primary column content-->
-				<h1>HTML Ipsum Presents</h1>
+				<h1>{$article_info.article_name}</h1>
 				<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
 				<h3 class="short_headline"><span>Blockquote</span></h3>
 				<blockquote>
@@ -197,21 +197,13 @@
 			
 			<section class="span3 sidebar secondary-column" id="secondary-nav">
 				<aside class="widget">
-					<h5 class="short_headline"><span>Goodies Menu</span></h5>
-					<ul class="navigation">
-						<li><a href="tall-logo.html">Tall Logo Header</a></li>
-						<li><a href="alternative-header.html">Alternative Header</a></li>
-						<li><a href="columns.html">Inner Columns</a></li>
-						<li><a href="toggles.html">Toggles</a></li>
-						<li><a href="tabs.html">Tabs</a></li>
-						<li><a href="responsive-tables.html">Responsive Tables</a></li>
-						<li><a href="figures-images.html">Figures and Images</a></li>
-						<li><a href="icons.html">Icons</a></li>
-						<li><a href="typography-elements.html">Typography & Elements</a></li>
-						<li><a href="hero-equal-height-columns.html">Hero Equal Height Cols</a></li>
-						<li><a href="misc-components.html">Misc Bootstrap Stuff</a></li>
-						<li><a href="bootstrap-thumbnails.html">Bootstrap's Thumbnails</a></li>
+					<h5 class="short_headline"><span>文章</span></h5>
+       	                             <foreach name="articles" item="article">
+                                                <ul class="navigation">
+						<li><a href="__URL__/index/id/{$article.id}">{$article.article_name}</a></li>
+						
 					</ul>
+                                      </foreach>
 				</aside>
 				<!--close aside widget-->
 				
