@@ -3,9 +3,16 @@
 class CaseAction extends Action {
 
     public function index(){
-        $Case = M("Case");
-        $this->cases = $Case->select();
-        $this->display();
+        session('[start]');// 启动session，同session_start()
+        if(empty($_SESSION['user_name'])){          //同$_SESSION['name']的session('name')区别
+           $this->display('User:login_front');
+         }
+        else{
+           $this->admin=$_SESSION;
+           $Case = M("Case");
+           $this->cases = $Case->select();
+           $this->display();
+        }
     }
 
     public function read($id=0){
