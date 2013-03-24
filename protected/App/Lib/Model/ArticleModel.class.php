@@ -2,7 +2,7 @@
 class ArticleModel extends Model{
    // 定义自动验证
     protected $_validate    =   array(
-        array('articlename','require','名称必须填写'),
+        array('article_name','require','名称必须填写'),
     );
 
     // 定义自动完成
