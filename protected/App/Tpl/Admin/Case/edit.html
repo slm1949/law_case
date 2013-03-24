@@ -1,19 +1,23 @@
 <form class="form-horizontal"  method="post" action="__URL__/update">
-   <fieldset>
-   <legend>修改</legend>
-     <div class="control-group">
-        <input type="hidden" name="id" value="{$case.id}">
-        <label class="control-label">标题：</label>
-        <div class="controls">
-          <input type="text" name="name" value="{$case.name}"><br/>
+    <input type="hidden" name="id" value="{$case.id}">
+    <fieldset>
+        <legend>修改</legend>
+        <div class="control-group">
+            <label class="control-label">标题</label>
+            <div class="controls">
+                <input type="text" name="name" value="{$case.name}"><br/>
+            </div>
         </div>
-      </div>
-      <div class="control-group">
-        <label class="control-label">内容：</label>
-         <div class="controls">
-            <textarea name="description" rows="5" cols="45">{$case.description}</textarea><br/>
-         </div>
-     </div>
-     <input class="btn" type="submit" value="提交">
-  </fieldset>
+        <div class="control-group">
+            <label class="control-label">内容</label>
+            <div class="controls">
+                <textarea name="description" rows="5" cols="45">{$case.description}</textarea>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <input class="btn" type="submit" value="提交">
+            </div>
+        </div>
+    </fieldset>
 </form>
