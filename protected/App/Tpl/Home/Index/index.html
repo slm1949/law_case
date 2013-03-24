@@ -23,133 +23,26 @@
 			<div class="filter-box clearfix"><span id="filter">Filter<i class="icon-sort"></i></span>
 				<ul class='sort' id="option">
 					<li><a class="active" href="#" data-filter="*">All</a></li>
-					<li><a href="#" data-filter=".letter-press">Letter Press</a></li>
-					<li><a href="#" data-filter=".identity">Identity</a></li>
-					<li><a href="#" data-filter=".motion">Motion</a></li>
-					<li><a href="#" data-filter=".art">Art</a></li>
-					<li><a href="#" data-filter=".web-design">Web Design</a></li>
-					<li><a href="#" data-filter=".featured">Featured</a></li>
+					<foreach name="cases" item="case">
+						<li>
+							<a href="__URL__/index/id/{$case.id}">{$case.name}</a>
+						</li>	
+                    			</foreach>
 				</ul>
 			</div>
 			<ul class="gallery four_col clearfix">
-				<!-- three_col four_col two_col -->
-				<li class="letter-press featured"> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-typography.jpg" alt="" /><span class="plus"></span></a>
+				<foreach name="cases" item="case">
+					<!-- three_col four_col two_col -->
+					<li class="letter-press featured"> <a class="hover" href="href="__URL__/index/id/{$case.id}"> <img src={$case.picture} alt="" /><span class="plus"></span></a>
 					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">World Wide Web Typography</a></h4>
-						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat...</p>
+						<h4><a href="__URL__/index/id/{$case.id}">{$case.name}</a></h4>
+						<p>{$case.description}</p>
 						<div class="categories"><a href="#">Letter Press</a>, <a href="#">Featured</a></div>
 						<span class="credit"><a href="http://www.flickr.com/photos/adactio/5817823805/" target="_blank">CC BY 2.0  Jeremy Keith</a></span> </div>
 					<!--close entry-summary--> 
-				</li>
-				<li class="letter-press identity"> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-ffmore.jpg" alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">FF More and More</a></h4>
-						<div class="categories"><a href="#">Letter Press</a>, <a href="#">Identity</a></div>
-						<span class="credit"><a href="http://www.flickr.com/photos/fontfont/5573878636/in/photostream/" target="_blank">CC BY 2.0 FontFont</a></span> </div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="motion"> <a href="portfolio-video.html" class="videoicon hover"><img src="http://img.youtube.com/vi/6gWv6tyWFgQ/0.jpg" alt="The Meth Minute 39" /><span class="videoicon"></span><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-video.html">Video Example</a></h4>
-						<p>Optional text. Wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat...</p>
-						<div class="categories"><a href="#">Motion</a></div>
-					</div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="web-design"> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-ann-marie-comp.png" alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">Ann Marie</a></h4>
-						<p>Just a filler image to make 16 images</p>
-						<div class="categories"><a href="#">Web Design</a></div>
-						<span class="credit">Christina (me)</span> </div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="letter-press featured"> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-wishrain.jpg" alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">I wish it would rain</a></h4>
-						<div class="categories"><a href="#" >Letter Press</a></div>
-						<span class="credit"><a href="http://www.flickr.com/photos/fontfont/4830134044/in/photostream/">CC BY 2.0  FontFont</a></span> </div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="letter-press"> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-fontlove.jpg" alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">Font Love</a></h4>
-						<div class="categories"><a href="#">Letter Press</a></div>
-						<span class="credit"><a href="http://www.flickr.com/photos/fontfont/4839972619/" target="_blank">CC BY 2.0  FontFont</a></span> </div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="web-design"> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-responsive-showcase.png" alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">Responsive Showcase</a></h4>
-						<div class="categories"><a href="#">Web Design</a></div>
-					</div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="web-design"> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-screen-shot.png" alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">Screen Shot</a></h4>
-						<div class="categories"><a href="#">Web Design</a></div>
-					</div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="identity "> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-tgs.png" alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">Tampa Guitar School</a></h4>
-						<p>I logo I did for my brother years ago.</p>
-						<div class="categories"><a href="#">Identity</a></div>
-					</div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="art"> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-mona-lisa.png" alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">Mona Lisa</a></h4>
-						<div class="categories"><a href="#">Art</a></div>
-					</div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="letter-press motion "> <a href="portfolio-video.html" class="videoicon hover"><img src="http://img.youtube.com/vi/zIeWZjmeGxg/0.jpg" alt="Video" /><span class="videoicon"></span><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-video.html">Video Example</a></h4>
-						<div class="categories"><a href="#">Motion</a></div>
-					</div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="letter-press identity "> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-thinkmore.jpg" alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">Think more, design less</a></h4>
-						<div class="categories"><a href="#">Letter Press</a>, <a href="#">Identity</a></div>
-						<span class="credit"><a href="http://www.flickr.com/photos/theilluminated/5182516884/" target="_blank">CC BY 2.0  Jon Ashcroft</a></span> </div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="identity "> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-bogart-yogurt.png" alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">Bogart the Yogurt</a></h4>
-						<p>A logo for a site I registered.</p>
-						<div class="categories"><a href="#">Identity</a></div>
-					</div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="art"> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-mucha.png" alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">Mucha Good</a></h4>
-						<div class="categories"><a href="#">Art</a></div>
-					</div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="identity "> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-smartgirls.jpg" alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">Smart Girls in Space</a></h4>
-						<div class="categories"><a href="#">Identity</a></div>
-					</div>
-					<!--close entry-summary--> 
-				</li>
-				<li class="art"> <a class="hover" href="portfolio-single.html"> <img src="../demo/portfolio/t-maler.png" alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="portfolio-single.html">Maler</a></h4>
-						<div class="categories"><a href="#">Art</a></div>
-					</div>
-					<!--close entry-summary--> 
-				</li>
+					</li>
+                    		</foreach>
+
 			</ul>
 			<div class="pagination pagination-centered no-margin pagination-footer pagination-mini">
 				<ul>
