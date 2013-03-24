@@ -29,18 +29,6 @@
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" />
 <link rel="shortcut icon" href="favicon.ico" />
 
-<!-- Open Graph for facebook
-http://graph.facebook.com/[UserName] replace [UserName] 
-with yours and get your fb:admis content information where the XXXX goes.
-================================================== -->
-<meta property="og:title" content="" />
-<meta property="og:type" content="" />
-<meta property="og:url" content="" />
-<meta property="og:image" content=""/>
-<meta property="og:site_name" content="" />
-<meta property="fb:admins" content="XXXXX" />
-<meta property="og:locale" content="en_us" />
-<meta property="og:description" content="  " />
 
 <!-- JS JQuery in the head you can use ajax if you want ================ -->
 <script src="__PUBLIC__/js/jquery.min.js"></script>
@@ -85,13 +73,14 @@ with yours and get your fb:admis content information where the XXXX goes.
 </section>
 
 <!-- begin .header-->
-<header class="header  clearfix"> <img src="__PUBLIC__/images/print-logo.png" class="print logo" alt="name of company" />
+<header class="header  clearfix">
+	<img src="__PUBLIC__/images/print-logo.png" class="print logo" alt="name of company" />
 	<div class="container"> 
 		
 		<!-- begin #main_menu -->
 		<nav id="main_menu">
 			<ul class="accordmobile">
-				<li><a href="index.html">Home</a></li>
+				<li><a href="__APP__/">首页</a></li>
 				<li class="parent"><a href="javascript:void(0)">Goodies<i></i></a>
 					<ul>
 						<li><a href="tall-logo.html">Tall Logo Header</a></li>
@@ -160,7 +149,11 @@ with yours and get your fb:admis content information where the XXXX goes.
 		<!-- close / #main_menu --> 
 		
 		<!-- begin #logo -->
-		<div id="logo"> <a href="index.html"><img alt="" src="__PUBLIC__/images/trans.gif" /><em>Crisp Responsive HTML Retina Ready Bootstrap Goodness</em><!--effing ie7 support--></a> </div>
+		<div id="logo">
+			<a href="__APP__/">
+				<img alt="" src="__PUBLIC__/images/trans.gif" /><em>Crisp Responsive HTML Retina Ready Bootstrap Goodness</em><!--effing ie7 support-->
+			</a>
+		</div>
 		<!-- end #logo --> 
 		
 	</div>
@@ -170,7 +163,7 @@ with yours and get your fb:admis content information where the XXXX goes.
 
 <!-- begin #page - the container for everything but header -->
 <div id="page">
-	
+
 {__CONTENT__}
 
 <!--begin footer -->
