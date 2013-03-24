@@ -34,7 +34,7 @@ class ArticleAction extends Action {
                 $this->error('写入错误！');
             }
         }else{
-            $this->error($Case->getError());
+            $this->error($Article->getError());
         }
     }
 
@@ -55,7 +55,7 @@ class ArticleAction extends Action {
                 $this->error('写入错误！');
             }
         }else{
-            $this->error($Case->getError());
+            $this->error($Article->getError());
         }
     }
 
