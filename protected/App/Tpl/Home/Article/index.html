@@ -1,0 +1,43 @@
+<div class="container visible-phone hidden-tablet hidden-desktop">
+	<p class="right">
+		<a class="btn btn-primary" href="#secondary-nav">案例导航 &nbsp;<i class="icon-align-justify"></i></a>
+	</p>
+</div>
+<div class="hero-unit">
+	<div class="container">
+		<h2>{$case_info.name}</h2>
+	</div>
+	<!--close container--> 
+</div>
+<!--close hero-unit-->
+<div class="container clearfix" id="main-content"> 
+	<!--begin main content-->
+	
+	<div class="row-fluid sidebar-left"> 
+		<!--begin row-fluid-->
+		<div class="span9 primary-column"> 
+			<!--begin primary column content-->
+			<h1>{$article_info.article_name}</h1>
+			<p>{$article_info.content}</p>
+		</div>
+		<!-- close span9 primary-column-->
+		
+		<section class="span3 sidebar secondary-column" id="secondary-nav">
+			<aside class="widget">
+				<h5 class="short_headline"><span>文章</span></h5>
+                <ul class="navigation">
+   	               	<foreach name="articles" item="article">
+					<li>
+						<a href="__URL__/index/id/{$article.id}">{$article.article_name}</a>
+					</li>	
+                    </foreach>
+				</ul>
+			</aside>
+			<!--close aside widget-->
+		</section>
+		<!--close section sidebar span3--> 
+	</div>
+	<!--close row-fluid--> 
+</div>
+<!--close .container id="main-content" --> 
+	
