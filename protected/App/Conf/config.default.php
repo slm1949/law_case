@@ -17,6 +17,7 @@ return array(
     'APP_GROUP_LIST' => 'Home,Admin', //项目分组设定
     'DEFAULT_GROUP'  => 'Home', //默认分组
 
-    'URL_MODEL' => 2
+    'URL_MODEL' => 2,
+    'URL_CASE_INSENSITIVE' => true
 );
 ?>
