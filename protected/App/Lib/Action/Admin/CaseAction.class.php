@@ -16,6 +16,7 @@ class CaseAction extends Action {
     }
 
     public function read($id=0){
+        $this->verify();//权限验证
         $Case   =   M('Case');
         // 读取数据
         $data =   $Case->find($id);
@@ -28,13 +29,16 @@ class CaseAction extends Action {
         $data2 =   $Article->where("case_id='$id'")->select();
         $this->data2=   $data2;// 模板变量赋值
         $this->display();
+      
     }
 
     public function add(){
+        $this->verify();//权限验证
         $this->display();
     }
 
     public function create(){
+        $this->verify();//权限验证
         $Case   =   D('Case');
         if($Case->create()) {
             $result =   $Case->add();
@@ -49,12 +53,14 @@ class CaseAction extends Action {
     }
 
     public function edit($id=0){
+        $this->verify();//权限验证
         $Case   =   M('Case');
         $this->case   =   $Case->find($id);
         $this->display();
     }
 
     public function update(){
+        $this->verify();//权限验证
         $Case   =   D('Case');
         if($Case->create()) {
             $result =   $Case->save();
@@ -69,9 +75,16 @@ class CaseAction extends Action {
     }
 
     public function delete($id=0){
+        $this->verify();//权限验证
         $Case = M('Case');
         $Case->where(array('id'=>$id))->delete();
 
         $this->success('删除成功', '__URL__/index');
+    }
+    protected function verify(){
+      session('[start]');// 启动session
+      if(empty($_SESSION['user_name'])){   //增加 后台管理页面的权限验证
+           $this->error('你没有登陆，没有管理权限！');
+      } 
     }
 }
