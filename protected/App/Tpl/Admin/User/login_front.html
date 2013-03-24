@@ -1,19 +1,22 @@
-<form method="post" action="__APP__/Admin/User/login">
-<fieldset>
-    <legend>管理员必须登陆</legend>
- <div class="control-group">
-   <label class="control-label">登录名:</label>
-   <div class="controls">
-       <input type="text"  name="user_name"><br/>
-   </div>
- </div>
- <div class="control-group">
-   <label class="control-label">密码:</label>
-   <div class="controls">
-      <input type="password"  name="password"><br/>
-   </div>
- </div>
- <input type="submit" value="提交">
-</fielset>
+<form method="post" action="__APP__/Admin/User/login" class="form-horizontal">
+    <fieldset>
+    <legend>管理员登陆</legend>
+    <div class="control-group">
+        <label class="control-label">登录名:</label>
+        <div class="controls">
+            <input type="text"  name="user_name">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">密码:</label>
+        <div class="controls">
+            <input type="password"  name="password">
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <input class="btn" type="submit" value="提交">
+        </div>
+    </div>
+    </fielset>
 </form>
-<a href="__APP__/Admin/Case">返回后台首页</a><br/>
