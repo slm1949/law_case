@@ -25,7 +25,7 @@
 					<li><a class="active" href="#" data-filter="*">All</a></li>
 					<foreach name="cases" item="case">
 						<li>
-							<a href="__URL__/index/id/{$case.id}">{$case.name}</a>
+							<a href="__APP__/Article/index/case_id/{$case.id}">{$case.name}</a>
 						</li>	
                     			</foreach>
 				</ul>
@@ -33,9 +33,9 @@
 			<ul class="gallery four_col clearfix">
 				<foreach name="cases" item="case">
 					<!-- three_col four_col two_col -->
-					<li class="letter-press featured"> <a class="hover" href="href="__URL__/index/id/{$case.id}"> <img src={$case.picture} alt="" /><span class="plus"></span></a>
+					<li class="letter-press featured"> <a class="hover" href="href="__APP__/Article/index/case_id/{$case.id}"> <img src={$case.picture} alt="" /><span class="plus"></span></a>
 					<div class="entry-summary">
-						<h4><a href="__URL__/index/id/{$case.id}">{$case.name}</a></h4>
+						<h4><a href="__APP__/Article/index/case_id/{$case.id}">{$case.name}</a></h4>
 						<p>{$case.description}</p>
 						<div class="categories"><a href="#">Letter Press</a>, <a href="#">Featured</a></div>
 						<span class="credit"><a href="http://www.flickr.com/photos/adactio/5817823805/" target="_blank">CC BY 2.0  Jeremy Keith</a></span> </div>
