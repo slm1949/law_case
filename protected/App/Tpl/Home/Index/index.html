@@ -1,60 +1,30 @@
-<!-- begin #page - the container for everything but header -->
-<div id="page">
-	<div class="hero-unit">
-		<div class="container">
-			<h1>案例展示</h1>
-		</div>
-		<!--close container--> 
+<div class="hero-unit">
+	<div class="container">
+		<h1>案例展示</h1>
 	</div>
-	<!--close hero-unit--> 
-	
-	<!--notice how sliders and are outside the this main content div-->
-	<div class="container clearfix" id="main-content">
-		<div class="pagination pagination-right no-margin pagination-mini">
-			<ul>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li class="active"><span>3</span></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">Next</a></li>
-			</ul>
-		</div>
-		<div class="row-fluid">
-			<div class="filter-box clearfix"><span id="filter">Filter<i class="icon-sort"></i></span>
-				<ul class='sort' id="option">
-					<li><a class="active" href="#" data-filter="*">All</a></li>
-					<foreach name="cases" item="case">
-						<li>
-							<a href="__APP__/Article/index/case_id/{$case.id}">{$case.name}</a>
-						</li>	
-                    			</foreach>
-				</ul>
-			</div>
-			<ul class="gallery four_col clearfix">
-				<foreach name="cases" item="case">
-					<!-- three_col four_col two_col -->
-					<li class="letter-press featured"> <a class="hover" href="href="__APP__/Article/index/case_id/{$case.id}"> <img src={$case.picture} alt="" /><span class="plus"></span></a>
-					<div class="entry-summary">
-						<h4><a href="__APP__/Article/index/case_id/{$case.id}">{$case.name}</a></h4>
-						<p>{$case.description}</p>
-						<div class="categories"><a href="#">Letter Press</a>, <a href="#">Featured</a></div>
-						<span class="credit"><a href="http://www.flickr.com/photos/adactio/5817823805/" target="_blank">CC BY 2.0  Jeremy Keith</a></span> </div>
-					<!--close entry-summary--> 
-					</li>
-                    		</foreach>
+	<!--close container--> 
+</div>
+<!--close hero-unit--> 
 
-			</ul>
-			<div class="pagination pagination-centered no-margin pagination-footer pagination-mini">
-				<ul>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li class="active"><span>3</span></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">Next</a></li>
-				</ul>
-			</div>
-		</div>
-		<!--close row-fluid--> 
-		
+<!--notice how sliders and are outside the this main content div-->
+<div class="container clearfix" id="main-content">
+	<div class="row-fluid">
+		<ul class="gallery four_col clearfix">
+			<foreach name="cases" item="case">
+			<li class="letter-press featured">
+				<a class="hover" href="__APP__/Article/index/case_id/{$case.id}">
+					<img src={$case.picture} alt="" />
+					<span class="plus"></span>
+				</a>
+				<div class="entry-summary">
+				<h4><a href="__APP__/Article/index/case_id/{$case.id}">{$case.name}</a></h4>
+				<p>{$case.description}</p>
+				</div>
+			</li>
+            </foreach>
+		</ul>
 	</div>
-	<!--close .container role="main-content" --> 
+	<!--close row-fluid--> 
+	
+</div>
+<!--close .container role="main-content" --> 
