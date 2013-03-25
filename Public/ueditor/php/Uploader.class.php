@@ -188,8 +188,8 @@ class Uploader
             $pathStr .= "/";
         }
         $pathStr .= date( "Ymd" );
-        if ( !file_exists( $pathStr ) ) {
-            if ( !mkdir( $pathStr , 0777 , true ) ) {
+        if ( !file_exists( dirname(__FILE__).'/'.$pathStr ) ) {
+            if ( !mkdir( dirname(__FILE__).'/'.$pathStr , 0777 , true ) ) {
                 return false;
             }
         }
