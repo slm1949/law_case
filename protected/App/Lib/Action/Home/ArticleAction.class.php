@@ -2,7 +2,15 @@
 class ArticleAction extends Action {
     public function index($id=0,$case_id=0){         
 		$Article   =   M('Article');
-	    $Articles =   $Article->where("case_id='$case_id'")->select();//读取所有文章信息
+		$Case=M('Case');
+		if(!empty($case_id)){
+			$Articles =   $Article->where("case_id='$case_id'")->select();//读取所有文章信息
+		}
+		else{
+			$cases=$Case->find();
+			$case_id=$cases['id'];
+			$Articles =   $Article->where("case_id='$case_id'")->select();//读取所有文章信息
+		}
 		if(!empty($id)){
 	        if(!$Articles) {
 				$Articles['article_name']='抱歉，没有文章';
