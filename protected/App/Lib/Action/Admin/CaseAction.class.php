@@ -39,8 +39,10 @@ class CaseAction extends Action {
 
     public function create(){
         $this->verify();//权限验证
+	$info = $this->upload();	//取得成功上传的文件信息
         $Case   =   D('Case');
-        if($Case->create()) {
+	$_POST['picture'] = $info[0]['savename'];
+        if($Case->create()) {   // 根据表单提交的POST数据创建数据对象
             $result =   $Case->add();
             if($result) {
                 $this->success('操作成功！', '__URL__/index');
@@ -61,7 +63,9 @@ class CaseAction extends Action {
 
     public function update(){
         $this->verify();//权限验证
+	$info = $this->upload();  	//取得成功上传的文件信息
         $Case   =   D('Case');
+	$_POST['picture'] = $info[0]['savename'];
         if($Case->create()) {
             $result =   $Case->save();
             if($result) {
@@ -85,6 +89,21 @@ class CaseAction extends Action {
       session('[start]');// 启动session
       if(empty($_SESSION['user_name'])){   //增加 后台管理页面的权限验证
            $this->error('你没有登陆，没有管理权限！');
+
       } 
+    }
+    protected function upload() {
+	import('ORG.Net.UploadFile');
+	$upload = new UploadFile();// 实例化上传类
+	$upload->maxSize  = 3145728 ;// 设置附件上传大小
+	$upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
+	$upload->savePath =  './Public/upload/';// 相对目录以那个地方为基准，---入口index.php
+	if(!$upload->upload()) {// 上传错误提示错误信息
+		$this->error($upload->getErrorMsg());
+	}else{// 上传成功
+		//$this->success('上传成功！');
+	//返回成功上传的文件信息
+	return $upload->getUploadFileInfo();
+	}
     }
 }
