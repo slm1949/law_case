@@ -1,23 +1,22 @@
 <?php
 class IndexAction extends Action {
     public function index(){
-      $this->redirect('Article/index/', array('case_id'=>1));
-
-      //  $Case   =   M('Case');
-      //  $Cases =   $Case->select();//读取所有案例信息
-      //  if($Cases) {
-      //    $this->cases =   $Cases;
-      //  }
-      //  else{
-      //    $Cases['Case_name']='抱歉，没有案例';
-      //    $this->Cases=$Cases;
-      // }
-/*           $Case_info =   $Case->find($id);//id=$id的文章信息
-       $this->Case_info=$Case_info ;
-       $Case = M("Case");
-       //$this->cases = $Case->select();//读取所有案例信息
-       $case_id=$Case_info['case_id'];
-       $this->case_info=$Case->find($case_id);//读取id=case_id 的case信息 */
-	     // $this->display();
+      //$this->redirect('Article/index/', array('case_id'=>1));
+	import('ORG.Util.Page');// 导入分页类
+        $Case   =   M('Case');
+	$count      = $Case->count();// 查询满足要求的总记录数
+	$Page       = new Page($count,8);// 实例化分页类,传入总记录数和每页的记录数
+	$show       = $Page->show();// 分页显示输出
+	$this->assign('page',$show);// 赋值分页输出
+	// 进行分页数据查询
+        $Cases =   $Case->limit($Page->firstRow.','.$Page->listRows)->select();//读取所有案例信息
+        if($Cases) {
+          $this->cases =   $Cases;
+        }
+        else{
+          $Cases['Case_name']='抱歉，没有案例';
+          $this->Cases=$Cases;
+       }
+	      $this->display();
     }  
 }
