@@ -2,7 +2,7 @@
 class IndexAction extends Action {
     public function index(){
       //$this->redirect('Article/index/', array('case_id'=>1));
-	$config=A('Config');
+	$config=A('Admin/Config');
 	$sites=$config->site_info();
 	$this->assign($sites);//获取网站的配置信息    
 	import('ORG.Util.Page');// 导入分页类

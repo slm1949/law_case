@@ -1,7 +1,7 @@
 <?php
 class ArticleAction extends Action {
     public function index($id=0,$case_id=0){ 
-		$config=A('Config');
+		$config=A('Admin/Config');
 		$sites=$config->site_info();
 		$this->assign($sites);    //获取网站的配置信息    
 		$Article   =   M('Article');
