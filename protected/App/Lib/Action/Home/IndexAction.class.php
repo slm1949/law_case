@@ -2,6 +2,9 @@
 class IndexAction extends Action {
     public function index(){
       //$this->redirect('Article/index/', array('case_id'=>1));
+	$config=A('Config');
+	$sites=$config->site_info();
+	$this->assign($sites);//获取网站的配置信息    
 	import('ORG.Util.Page');// 导入分页类
         $Case   =   M('Case');
 	$count      = $Case->count();// 查询满足要求的总记录数
