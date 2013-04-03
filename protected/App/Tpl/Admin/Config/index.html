@@ -1,20 +1,34 @@
 <form class="form-horizontal" method="post" action="__URL__/update">
-<table class="table">
-    <tr>
-        <td>网站名称</td>
-		<td><input name="site_name" value='{$site_name}'></td>
-	<tr>
-        <td>网站描述</td>
-		<td><input name="site_description" value='{$site_description}'></td>
-	</tr>
-	<tr>
-        <td>电话</td>
-		<td><input name="site_phone" value='{$site_phone}'></td>
-	</tr>
-	<tr>
-        <td>电子邮箱</td>
-		<td><input name="site_email" value='{$site_email}'></td>
-    </tr>
-</table>
-<input type="submit" value="保存修改" >
+    <fieldset>
+        <legend>修改网站信息</legend>
+            <div class="control-group">
+                <label class="control-label">网站名称</label>
+                <div class="controls">
+                    <input name="site_name" value='{$site_name}' />
+                </div>
+		    </div>
+		    <div class="control-group">
+                <label class="control-label">网站描述</label>
+                <div class="controls">
+                    <input name="site_description" value='{$site_description}' />
+                </div>
+		    </div>
+		    <div class="control-group">
+                <label class="control-label">电话</label>
+                <div class="controls">
+                    <input name="site_phone" value='{$site_phone}' />
+                </div>
+		    </div>
+		    <div class="control-group">
+                <label class="control-label">电子邮箱</label>
+                <div class="controls">
+                    <input name="site_email" value='{$site_email}' />
+                </div>
+		    </div>
+		    <div class="control-group">
+                <div class="controls">
+                    <input class="btn" type="submit" value="保存修改" />
+                </div>
+            </div>
+    </fieldset>
 </form>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013 年 04 月 01 日 21:18
+-- 生成日期: 2013 年 04 月 01 日 22:34
 -- 服务器版本: 5.5.29
 -- PHP 版本: 5.4.6-1ubuntu1.1
 
@@ -79,6 +79,12 @@ CREATE TABLE IF NOT EXISTS `think_user` (
   `password` varchar(125) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+INSERT INTO `think_config` (`id`, `key`, `value`) VALUES
+(1, 'site_name', '卢光明案'),
+(2, 'site_description', '@ 2012 卢光明案.'),
+(3, 'phone', '010'),
+(4, 'email', 'tt');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
