@@ -11,8 +11,9 @@ class UserAction extends Action{
             }else{
                 $this->error('管理员名或密码错误');
             }
+        }else{
+            $this->display();
         }
-        $this->display();
     }
     
     public function logout(){
