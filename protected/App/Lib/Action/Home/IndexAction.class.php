@@ -1,10 +1,6 @@
 <?php
-class IndexAction extends Action {
+class IndexAction extends BaseAction {
     public function index(){
-        $config=D('Config');
-        $sites=$config->map();
-        var_dump($sites);
-        $this->assign($sites);//获取网站的配置信息
         import('ORG.Util.Page');// 导入分页类
         $Case   =   M('Case');
         $count      = $Case->count();// 查询满足要求的总记录数
