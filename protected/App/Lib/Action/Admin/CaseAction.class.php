@@ -18,10 +18,10 @@ class CaseAction extends BaseAction {
             $this->error('数据错误');
         }
         $Article=   M('Article');
-        $data2 =   $Article->where("case_id='$id'")->select();
-        $this->data2=   $data2;// 模板变量赋值
+        $articles =   $Article->where("case_id='$id'")->order('sort')->select();
+        $this->articles=   $articles;// 模板变量赋值
         $this->display();
-      
+
     }
 
     public function add(){
@@ -72,7 +72,7 @@ class CaseAction extends BaseAction {
 
         $this->success('删除成功', '__URL__/index');
     }
- 
+
     protected function upload() {
         import('ORG.Net.UploadFile');
         $upload = new UploadFile();// 实例化上传类

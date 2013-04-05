@@ -24,13 +24,18 @@ window.UEDITOR_HOME_URL="__PUBLIC__/ueditor/";
             <div class="controls">
                 <input  type="text" name="summary">
             </div>
-            
+        </div>
+        <div class="control-group">
+            <label class="control-label">排序</label>
+            <div class="controls">
+                <input  type="text" name="sort" value={$article.sort}>
+            </div>
         </div>
         <div class="control-group">
                 <label class="control-label">内容</label>
                 <div class="controls">
                    <textarea id="content" name="content" rows="5" cols="45"></textarea>
-                   <script language="javascript" type="text/javascript"> 
+                   <script language="javascript" type="text/javascript">
                         var editor=new baidu.editor.ui.Editor();
                         editor.render("content");
                    </script>
