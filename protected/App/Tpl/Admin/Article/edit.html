@@ -9,33 +9,33 @@ window.UEDITOR_HOME_URL="__PUBLIC__/ueditor/";
     <a class="btn" href="__APP__/Admin/Case/read/id/{$case_id}">返回案例</a>
 </p>
 
-<form class="form-horizontal" method="post" action="__URL__/update">
+<form class="form-horizontal form_validate" method="post" action="__URL__/update">
     <fieldset>
         <legend>修改案例文章</legend>
         <div class="control-group">
             <input type="hidden" name="id" value="{$article.id}">
             <label class="control-label">标题</label>
             <div class="controls">
-                <input type="text" name="article_name" value="{$article.article_name}"><br/>
+                <input type="text" name="article_name" value="{$article.article_name}" required="true" maxlength="32"><br/>
             </div>
         </div>
         <div class="control-group">
             <input type="hidden" name="case_id" value={$case_id}>
             <label class="control-label">简介</label>
             <div class="controls">
-                <input  type="text" name="summary" value={$article.summary}>
+                <textarea name="summary" value="{$article.summary}" required="true" maxlength="255"></textarea>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">排序</label>
             <div class="controls">
-                <input  type="text" name="sort" value={$article.sort}>
+                <input type="text" name="sort" value="{$article.sort}" required="true" class="number" max="512">
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">内容</label>
             <div class="controls">
-                <textarea id="content" name="content" rows="5" cols="45">{$article.content}</textarea>
+                <textarea id="content" name="content" rows="5" cols="45" required="true">{$article.content}</textarea>
             </div>
         </div>
 
