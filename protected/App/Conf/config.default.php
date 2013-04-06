@@ -17,6 +17,9 @@ return array(
     'APP_GROUP_LIST' => 'Home,Admin', //项目分组设定
     'DEFAULT_GROUP'  => 'Home', //默认分组
 
+    'URL_MODEL' => 2,
+    'URL_CASE_INSENSITIVE' => true,
+
     'TMPL_ACTION_ERROR'     => ':message', // 默认错误跳转对应的模板文件
     'TMPL_ACTION_SUCCESS'   => ':message', // 默认错误跳转对应的模板文件
 );
