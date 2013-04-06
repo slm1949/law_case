@@ -80,6 +80,19 @@ CREATE TABLE IF NOT EXISTS `think_user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
+-- 表的结构 `think_contact`
+--
+
+CREATE TABLE IF NOT EXISTS `think_contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `message` text NOT NULL,
+  `time` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
 INSERT INTO `think_config` (`id`, `key`, `value`) VALUES
 (1, 'site_name', '卢光明案'),
 (2, 'site_description', '@ 2012 卢光明案.'),

@@ -57,6 +57,9 @@
 		<nav id="main_menu">
 			<ul class="accordmobile">
 				<li><a href="__APP__/">首页</a></li>
+				    <foreach name="navigates" item='navigate'>
+				    <li><a href="{$navigate.url}">{$navigate.name}</a></li>
+				    </foreach>
 				<li><a href="__APP__/Contact/">联系我们</a></li>
 			</ul>
 		</nav>
