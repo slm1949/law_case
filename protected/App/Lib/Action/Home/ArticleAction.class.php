@@ -1,9 +1,6 @@
 <?php
-class ArticleAction extends Action {
-    public function index($id=0,$case_id=0){ 
-		$config=A('Admin/Config');
-		$sites=$config->site_info();
-		$this->assign($sites);    //获取网站的配置信息    
+class ArticleAction extends BaseAction {
+    public function index($id=0,$case_id=0){
 		$Article   =   M('Article');
 		$Case=M('Case');
 		if(!empty($case_id)){

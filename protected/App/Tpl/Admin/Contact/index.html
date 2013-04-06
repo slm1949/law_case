@@ -1,0 +1,18 @@
+<table class="table">
+    <tr>
+        <td>留言者姓名</td>
+        <td>电话</td>
+        <td>邮箱</td>
+        <td>留言</td>
+        <td>创建时间</td>
+    </tr>
+    <foreach name="contacts" item="contact">
+    <tr>
+        <td>{$contact.name}</td>
+        <td>{$contact.phone}</td>
+        <td>{$contact.email}</td>
+        <td>{$contact.message}</td>
+        <td>{$contact.time}</td>
+    </tr>
+    </foreach>
+</table>

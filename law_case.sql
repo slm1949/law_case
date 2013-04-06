@@ -83,8 +83,8 @@ CREATE TABLE IF NOT EXISTS `think_user` (
 INSERT INTO `think_config` (`id`, `key`, `value`) VALUES
 (1, 'site_name', '卢光明案'),
 (2, 'site_description', '@ 2012 卢光明案.'),
-(3, 'phone', '010'),
-(4, 'email', 'tt');
+(3, 'site_phone', '010'),
+(4, 'site_email', 'tt');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
