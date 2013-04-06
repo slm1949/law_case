@@ -7,7 +7,6 @@ class ContactAction extends BaseAction {
 
     public function create(){
         $Contact   =   D('Contact');
-        var_dump($Contact);
         if($Contact->create()) {   // 根据表单提交的POST数据创建数据对象
             $result =   $Contact->add();
             if($result) {
