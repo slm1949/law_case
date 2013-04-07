@@ -1,28 +1,28 @@
-<form class="form-horizontal" method="post" action="__URL__/update">
+<form class="form-horizontal form_validate" method="post" action="__URL__/update">
     <fieldset>
         <legend>修改网站信息</legend>
             <div class="control-group">
                 <label class="control-label">网站名称</label>
                 <div class="controls">
-                    <input type="text" name="site_name" value='{$site_name}' />
+                    <input type="text" name="site_name" class="required" value='{$site_name}' />
                 </div>
 		    </div>
 		    <div class="control-group">
                 <label class="control-label">网站描述</label>
                 <div class="controls">
-                    <input type="text" name="site_description" value='{$site_description}' />
+                    <input type="text" name="site_description" class="required" value='{$site_description}' />
                 </div>
 		    </div>
 		    <div class="control-group">
                 <label class="control-label">电话</label>
                 <div class="controls">
-                    <input type="text" name="site_phone" value='{$site_phone}' />
+                    <input type="text" name="site_phone" class="required" value='{$site_phone}' />
                 </div>
 		    </div>
 		    <div class="control-group">
                 <label class="control-label">电子邮箱</label>
                 <div class="controls">
-                    <input type="text" name="site_email" value='{$site_email}' />
+                    <input type="text" name="site_email" class="required email"  value='{$site_email}' />
                 </div>
 		    </div>
 		    <div class="control-group">

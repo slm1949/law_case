@@ -1,23 +1,23 @@
-<form class="form-horizontal" enctype="multipart/form-data" method="post" action="__URL__/update">
+<form class="form-horizontal form_validate" enctype="multipart/form-data" method="post" action="__URL__/update">
     <input type="hidden" name="id" value="{$case.id}">
     <fieldset>
         <legend>修改案例</legend>
         <div class="control-group">
             <label class="control-label">标题</label>
             <div class="controls">
-                <input type="text" name="name" value="{$case.name}"><br/>
+                <input type="text" name="name" class="required" maxlength="50" value="{$case.name}"><br/>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">描述</label>
             <div class="controls">
-                <textarea name="description" rows="5" cols="45">{$case.description}</textarea>
+                <textarea name="description" class="required" maxlength="512" rows="5" cols="45">{$case.description}</textarea>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">图片</label>
             <div class="controls">
-                <input type="file" name="picture" accept="image/*"/>
+                <input type="file" name="picture" />
                 <span class="help-block">
                     <img src="__PUBLIC__/upload/{$case.picture}" width='300'>
                 </span>

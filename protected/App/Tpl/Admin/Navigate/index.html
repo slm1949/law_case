@@ -1,22 +1,22 @@
-<form class="form-horizontal" method="post" action="__URL__/create">
+<form class="form-horizontal form_validate" method="post" action="__URL__/create">
     <fieldset>
         <legend>添加自定义导航</legend>
         <div class="control-group">
             <label class="control-label">导航名</label>
             <div class="controls">
-                <input type="text" name="name" />
+                <input type="text" class="required" name="name" />
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">URL地址</label>
             <div class="controls">
-                <input  type="text" name="url"/>
+                <input  type="text" class="required url" name="url"/>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">排序</label>
             <div class="controls">
-                <input  type="text" name="sort" />
+                <input  type="text" class="required number" max="100" name="sort" />
             </div>
         </div>
         <div class="control-group">

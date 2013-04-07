@@ -1,31 +1,32 @@
-
 <script type="text/javascript" charset="utf-8">
 window.UEDITOR_HOME_URL="__PUBLIC__/ueditor/";
 </script>
 <script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/editor_config.js"></script>
-<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/editor_all.js"></script> 
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/ueditor/editor_all.js"></script>
 
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/ueditor/themes/default/dialogbase.css"/>
 
-<form class="form-horizontal" method="post" action="__URL__/update">
+<form class="form-horizontal form_validate" method="post" action="__URL__/update">
     <fieldset>
+        <a class="brand" href="__APP__/Admin/Page">返回网站文章</a>
+        <legend>修改网站文章</legend>
         <div class="control-group">
             <input type="hidden" name="id" value="{$page.id}">
             <label class="control-label">标题：</label>
             <div class="controls">
-                <input type="text" name="name" value="{$page.name}"><br/>
+                <input type="text" name="name" class="required" value="{$page.name}"><br/>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">简介：</label>
             <div class="controls">
-                <textarea name="summary" rows="5" cols="45">{$page.summary}</textarea>
+                <textarea name="summary" class="required" rows="5" cols="45">{$page.summary}</textarea>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">内容：</label>
             <div class="controls">
-                <textarea id="content" name="content" rows="5" cols="45">{$page.content}</textarea>
+                <textarea id="content" name="content" class="required" rows="5" cols="45">{$page.content}</textarea>
             </div>
         </div>
 
@@ -37,7 +38,7 @@ window.UEDITOR_HOME_URL="__PUBLIC__/ueditor/";
     </fieldset>
 </form>
 
-<script language="javascript" type="text/javascript"> 
+<script language="javascript" type="text/javascript">
 var editor=new baidu.editor.ui.Editor();
 editor.render("content");
 </script>

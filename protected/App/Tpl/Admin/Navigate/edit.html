@@ -9,26 +9,26 @@ window.UEDITOR_HOME_URL="__PUBLIC__/ueditor/";
     <a class="btn" href="__APP__/Admin/Navigate">返回自定义导航</a>
 </p>
 
-<form class="form-horizontal" method="post" action="__URL__/update">
+<form class="form-horizontal form_validate" method="post" action="__URL__/update">
     <fieldset>
         <legend>修改导航信息</legend>
         <div class="control-group">
-            <input type="hidden" name="id" value="{$Navigate.id}">
+            <input type="hidden" name="id" class="required" value="{$Navigate.id}">
             <label class="control-label">导航名</label>
             <div class="controls">
-                <input type="text" name="name" value="{$Navigate.name}"><br/>
+                <input type="text" name="name" class="required" value="{$Navigate.name}"><br/>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">URL地址</label>
             <div class="controls">
-                <input  type="text" name="url" value="{$Navigate.url}">
+                <input  type="text" name="url" class="required url" value="{$Navigate.url}">
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">排序</label>
             <div class="controls">
-                <input  type="text" name="sort" value="{$Navigate.sort}">
+                <input  type="text" name="sort" class="required number" max="100" value="{$Navigate.sort}">
             </div>
         </div>
         <div class="control-group">

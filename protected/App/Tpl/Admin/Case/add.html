@@ -1,22 +1,22 @@
-<form class="form-horizontal" enctype="multipart/form-data" method="post" action="__URL__/create">
+<form class="form-horizontal form_validate" enctype="multipart/form-data" method="post" action="__URL__/create">
     <fieldset>
     <legend>添加案例</legend>
         <div class="control-group">
             <label class="control-label">标题</label>
             <div class="controls">
-                <input type="text" name="name">
+                <input type="text" class="required" maxlength="50" name="name">
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">描述</label>
             <div class="controls">
-                <textarea name="description" rows="5" cols="45"></textarea>
+                <textarea name="description" class="required" maxlength="512" rows="5" cols="45"></textarea>
             </div>
         </div>
         <div class="control-group">
             <label class="control-label">图片</label>
             <div class="controls">
-                <input type="file" name="picture" accept="image/*"/>
+                <input type="file" name="picture"   />
             </div>
         </div>
         <div class="control-group">
