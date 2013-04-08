@@ -1,6 +1,7 @@
 <?php
 class UserAction extends Action{
     public function login(){
+        $this->assign('login_active','class="active"');
         if($this->_post()){
             $Form=M('user');
             $condition['user_name']=$_POST['user_name'];
@@ -18,6 +19,7 @@ class UserAction extends Action{
     }
 
     public function logout(){
+        $this->assign('logout_active','class="active"');
         session('user_name', null);
         $this->success('管理员注销成功', 'login');
     }
