@@ -69,7 +69,8 @@ class CaseAction extends BaseAction {
     public function delete($id=0){
         $Case = M('Case');
         $Case->where(array('id'=>$id))->delete();
-
+        $Article=M('Article');
+        $Article->where(array('case_id'=>$id))->delete();//case删除时对应的article一起删除
         $this->success('删除成功', '__URL__/index');
     }
 
