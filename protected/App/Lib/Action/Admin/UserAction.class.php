@@ -4,7 +4,7 @@ class UserAction extends Action{
         if($this->_post()){
             $Form=M('user');
             $condition['user_name']=$_POST['user_name'];
-            $condition['password']=$_POST['password'];
+            $condition['password']=md5($_POST['password']);
             if($Form->where($condition)->count()>=1){
                 $_SESSION['user_name']=$_POST['user_name'];
                 $url_info=session('url_info')?session('url_info'):'__APP__/Admin/Case/index';
