@@ -22,8 +22,10 @@
         <div class="control-group">
             <div class="controls">
                 <input class="btn" type="submit" value="提交">
-             </div>
-         </fieldset>
+            </div>
+        </div>
+    </fieldset>
+</form>
 <table class="table">
     <tr>
         <td>导航名</td>
@@ -31,7 +33,6 @@
         <td>排序</td>
         <td>操作</td>
     </tr>
-
     <foreach name="navigates" item="navigate">
         <tr>
            <td>{$navigate.name}</td>
@@ -40,7 +41,7 @@
            <td>
                <a href="__APP__/Admin/Navigate/edit/id/{$navigate.id}" class="btn btn-primary">修改</a>
                <a href="__APP__/Admin/Navigate/delete/id/{$navigate.id}" class="btn btn-primary">删除</a>
-           </td>
+            </td>
        </tr>
     </foreach>
 </table>
