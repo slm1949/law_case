@@ -1,8 +1,12 @@
 <?php
 class BaseAction extends Action {
     public function  _initialize(){
-        $this->assign(MODULE_NAME.'_active','class="active"');//获得当前模块的名，并激活当前模块对应的导航栏
-        $this->verify();
+        if(MODULE_NAME!='User'){
+            $this->assign(MODULE_NAME.'_active','class="active"');//获得当前模块的名，并激活当前模块对应的导航栏
+            $this->verify();
+        }else{
+            $this->assign(ACTION_NAME.'_active','class="active"');//获得当前模块的名，并激活当前模块对应的导航栏
+        }
     }
 
     protected function verify(){
