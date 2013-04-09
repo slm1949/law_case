@@ -13,13 +13,13 @@
                 <a class="brand" href="__APP__/">首页</a>
                 <ul class="nav">
                     <!--li><a href="__APP__/Admin/">后台首页</a></li-->
-                    <li {$Case_active}><a href="__APP__/Admin/Case">案例</a></li>
-					<li {$Config_active}><a href="__APP__/Admin/Config">网站信息</a></li>
-					<li {$Page_active}><a href="__APP__/Admin/Page">网站文章</a></li>
-					<li {$Navigate_active}><a href="__APP__/Admin/Navigate">导航栏设置</a></li>
-					<li {$Contact_active}><a href="__APP__/Admin/Contact">用户留言信息</a></li>
-                    {$change_password}
-                    <li {$logout_active}><a href="__APP__/Admin/User/logout">注销</a></li>
+                    <li <php>if(MODULE_NAME== 'Case' ) echo  'class="active"' ;</php> ><a href="__APP__/Admin/Case">案例</a></li>
+					<li <php>if(MODULE_NAME== 'Config' ) echo  'class="active"' ;</php> ><a href="__APP__/Admin/Config">网站信息</a></li>
+					<li <php>if(MODULE_NAME== 'Page' ) echo  'class="active"' ;</php> ><a href="__APP__/Admin/Page">网站文章</a></li>
+					<li <php>if(MODULE_NAME=='Navigate') echo  'class="active"' ;</php> ><a href="__APP__/Admin/Navigate">导航栏设置</a></li>
+					<li <php>if(MODULE_NAME=='Contact') echo  'class="active"' ;</php> ><a href="__APP__/Admin/Contact">用户留言信息</a></li>
+                    <php>if(!empty($_SESSION['user_name']) and ACTION_NAME=='change_pass') echo  '<li class="active"><a href="__APP__/Admin/User/change_pass">修改密码</a></li>';elseif(!empty($_SESSION['user_name']) and ACTION_NAME!='change_pass') echo '<li><a href="__APP__/Admin/User/change_pass">修改密码</a></li>';</php>
+                    <li <php>if(empty($_SESSION['user_name']) and ACTION_NAME== 'logout' ) echo  'class="active"' ;</php> ><a href="__APP__/Admin/User/logout">注销</a></li>
                 </ul>
             </div>
         </div>
